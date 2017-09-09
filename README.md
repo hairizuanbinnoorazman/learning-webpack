@@ -23,3 +23,7 @@ Create webpack.config.js instead and store the configurations there.
 
 Look at sample configuration markdown file
 
+# Webpack plugins
+
+- HtmlWebpackPlugin: [https://webpack.js.org/plugins/html-webpack-plugin/]
+
