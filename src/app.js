@@ -1,1 +1,3 @@
-console.log('Hello from app.js');
+const css = require('./app.css')
+
+console.log('Hello from app.js'); 
