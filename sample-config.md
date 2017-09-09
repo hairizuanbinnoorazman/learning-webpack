@@ -15,7 +15,9 @@ Hence, that is why u need to define variables to retreive the name of the folder
 
 Use the `__dirname` to get the Current directory name.
 
-This file generates the file (see the options available)
+This file generates the index.html file (see the options available)
+
+Also, as an additional bonus, we can minify the html (removes white space) as well as hash the javascript (this is to invalidate cache).
 
 ```js
 var HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -37,3 +39,5 @@ module.exports = {
 }
 ```
 
+
+**With css loaders**
