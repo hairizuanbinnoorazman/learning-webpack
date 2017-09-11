@@ -24,6 +24,18 @@ Create webpack.config.js instead and store the configurations there.
 Look at sample configuration markdown file
 
 # Webpack plugins
+Plugins to explore:
 
 - HtmlWebpackPlugin: [https://webpack.js.org/plugins/html-webpack-plugin/]
+
+# Modules 
+Modules to explore
+
+- css-loader 
+  - `npm install css-loader --save-dev`
+- style-loader
+  - `npm install style-loader --save-dev`
+- sass-loader
+- node-sass
+  - `npm install sass-loader node-sass --save-dev`
 
