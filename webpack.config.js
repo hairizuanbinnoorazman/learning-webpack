@@ -1,4 +1,5 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     entry: './src/app.js',
@@ -8,15 +9,27 @@ module.exports = {
     },
     module: {
         rules: [
-            {test: /\.css$/, use: ['style-loader', 'css-loader']}
+            {
+                test: /\.scss$/,
+                use: ExtractTextPlugin.extract({
+                    fallback: "style-loader",
+                    use: ['css-loader', 'sass-loader'],
+                    publicPath: '/dist'
+                })
+            }
         ]
     },
-    plugins: [new HtmlWebpackPlugin({
-        title: 'Project Demo',
-        minify: {
-            collapseWhitespace: true
-        },
-        hash: true,
-        template: './src/index.ejs'}
-    )]
+    plugins: [
+        new HtmlWebpackPlugin({
+            title: 'Project Demo',
+            minify: {
+                collapseWhitespace: true
+            },
+            hash: true,
+            template: './src/index.ejs'}),
+        new ExtractTextPlugin({
+            filename: "app.css",
+            disable: false,
+            allChunks: true})
+    ]
 }
